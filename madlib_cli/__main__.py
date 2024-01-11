@@ -1,5 +1,3 @@
-from madlib import welcome
-from parse_template import parse_template
+from madlib import main
 
-welcome()
-
+main()
