@@ -28,3 +28,4 @@
 ### Log
 
 - Wed: file setup, welcome, parse
+- Thurs: corrected file setup, followed along with code review and almost there - will fix after lunch!
