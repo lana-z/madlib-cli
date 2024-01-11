@@ -54,7 +54,7 @@ if __name__== "__main__":
     # print(template)
 
     stripped_template, parts = parse_template(template)
-    print(stripped_template)
+    #print(stripped_template)
 
     responses = []
 
