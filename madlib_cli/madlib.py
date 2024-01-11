@@ -1,8 +1,7 @@
 def welcome():
-    print('Welcome to MadLibs. You will be prompted in the terminal. Type your answer and enter. Have fun!')
+    print('Welcome to MadLibs. You will be prompted here in the terminal. To play, type your answer and enter. Have fun!')
 
 welcome()
-
 
 def read_template (path):
     """ 
@@ -50,3 +49,22 @@ def merge(stripped_template, parts):
     # * unpacks the tuple ie. turns into separate arguments - called star args or splat args
     return stripped_template.format(*parts)
 
+if __name__== "__main__": 
+    template = read_template('assets/dark_and_stormy_night_template.txt')
+    # print(template)
+
+    stripped_template, parts = parse_template(template)
+    print(stripped_template)
+
+    responses = []
+
+    for part in parts:
+        response = input(f"Please enter a {part}: ")
+        responses.append(response)
+
+    merged = merge(stripped_template, responses)
+
+    print(merged)
+
+    with open('assets/dark_and_stormy_night.txt', 'w+') as file:
+        file.write(merged)
